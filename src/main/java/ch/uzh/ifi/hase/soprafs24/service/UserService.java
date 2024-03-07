@@ -152,7 +152,7 @@ public class UserService {
 
     String baseErrorMessage = "The %s provided %s not unique. Therefore, the user could not be created!";
     if (userByUsername != null) {
-      throw new ResponseStatusException(HttpStatus.CONFLICT, String.format("Add User failed because username %s already exists.", "username"));
+      throw new ResponseStatusException(HttpStatus.CONFLICT, String.format("Add User failed because username %s already exists.", userByUsername.getUsername()));
     }
   }
 
