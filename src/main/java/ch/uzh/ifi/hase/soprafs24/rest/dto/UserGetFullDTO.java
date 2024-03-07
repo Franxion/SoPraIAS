@@ -1,13 +1,18 @@
 package ch.uzh.ifi.hase.soprafs24.rest.dto;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import ch.uzh.ifi.hase.soprafs24.constant.UserStatus;
 
-// THis DTO is for all the users
-public class UserGetDTO {
+// DTO for specific user
+public class UserGetFullDTO {
 
   private Long id;
   private String username;
   private UserStatus status;
+  private LocalDateTime creationDate;
+  private LocalDate birthdayDate;
 
   public Long getId() {
     return id;
@@ -31,5 +36,21 @@ public class UserGetDTO {
 
   public void setStatus(UserStatus status) {
     this.status = status;
+  }
+
+  public LocalDateTime getCreationDate() {
+    return creationDate;
+  }
+
+  public void setCreationDate(LocalDateTime creationDate) {
+    this.creationDate = creationDate;
+  }
+
+  public LocalDate getBirthdayDate() {
+    return birthdayDate;
+  }
+
+  public void setBirthdayDate(LocalDate birthdayDate) {
+    this.birthdayDate = birthdayDate;
   }
 }
